@@ -1,5 +1,5 @@
 /**
- *  CirconusClimateTrap
+ *  Circonus Climate Trap
  *
  *  Copyright 2017 Brian Clapper
  *
