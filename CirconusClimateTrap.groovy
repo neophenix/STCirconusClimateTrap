@@ -21,7 +21,7 @@ def isDebug() {
 }
  
 definition(
-    name: "CirconusClimateTrap",
+    name: "Circonus Climate Trap",
     namespace: "neophenix",
     author: "Brian Clapper",
     description: "App that will send data to a Circonus HTTPTrap check with climate sensor data (temp, uv, humidity, lux)",
