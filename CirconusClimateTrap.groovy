@@ -45,6 +45,9 @@ preferences {
     section("UV Index Sensors") {
         input "uvsensors", "capability.ultravioletIndex", multiple: true, required: false
     }
+    section("Thermostats") {
+        input "thermostats", "capability.thermostat", multiple: true, required: false
+    }
 }
 
 def buildSensorData() {
@@ -72,6 +75,12 @@ def buildSensorData() {
             resp[it.displayName] = [:]
         }
         resp[it.displayName]["uvindex"] = it.currentValue("ultravioletIndex")
+    }
+    thermostats.each {
+        if(!resp[it.displayName]) {
+            resp[it.displayName] = [:]
+        }
+        resp[it.displayName]["state"] = it.currentValue("thermostatOperatingState")
     }
     return resp
 }
